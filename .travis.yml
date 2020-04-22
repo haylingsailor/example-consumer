@@ -1,15 +1,15 @@
 language: node_js
 node_js:
-- 10
+  - 10
 services:
-- docker
+  - docker
 env:
   global:
-  - REACT_APP_API_BASE_URL=http://localhost:8080
-  - PACT_BROKER_BASE_URL=https://test.pact.dius.com.au
-  # PACT_BROKER_TOKEN is encrypted below
-  - secure: qo6hSFVdah1WFZxOdZWLmA5uL+kM8oLJgIjgzj0zlBFWEIW30UcyMqNGwIVzr/eqeseep43JB5TPSHXmCuQXQlOm1LjSsgThuE5cQEpDOB/vvVJ4Kug1ix+RnqCVA12qlOFQF6Z9h9BPSsSokSGxACLVbQr760VGwDJaFLJ7Yfvk86decuH6ta3tEdOY9KVJsQF1wW4brvj4J3pKSjauaDmqZkLj114WVvqsrKghR5Fv6x3cETmzsObS6uRsB7yfSfRIuZRLSXTZ6BLFh9oGmRg0Cccwe628lNmWbpelCnaIE73dLDml7kpq6/3gF2KglGU/+Je4RUanN7rDsUYY3VKEHpsGeNotj+N/FFOO/5vepLn/uMn0oeNy1rIylVbniQVHy81g4C0AgYc3oq9OLRguNObUH88UoMTJeGD3DyaDQbHBhvp8/ohESuySCsRX2T25YcRitsuhMBiQfdYKjnBUOCsxdgOBGSrA9/rhMSeY7JIKPXyyaHF+VNuvERps23/qHXn7f04gSlKq8hYejPtXdlaAfdxQXIKN7j51++Jdp8lU28fRSjeLKW4humGGlLCWOyzVXY5EXVFld15YxeYJBw0LYfm1eR7XHyMC7ZL29Rqnwtng7+8CpDpYDOE7ommhvqx9xeLJQSFbwQNcswlava0hFk6DAhfGIGDxRVk=
+    - REACT_APP_API_BASE_URL=http://localhost:8080
+    - PACT_BROKER_BASE_URL=https://andyballingall.pact.dius.com.au
+    # PACT_BROKER_TOKEN is encrypted below
+    - secure: "g0umfnTc26SLWf3IZSOIWvy1rQVqA9oheC7Y+JxdgGhCJMvpYAmy4ukCz4FaDIcWJJMyKayOg3VXWdirrlX3ulYuDZzw1+foycaP+cVcjgbG85rzs6nn8RCt2VJsYInusGEnuqRdONWsbQVcGaE1q6k3F3kkwCRw5QPNlCAnHNAvsvvPEbiVgVB4r/dbjqFH6A4t8xTTlyK0t4CSIdk46vTfyiX6AmAUZ6q8VoBJ66H1R5ey0QCy2bEuEvMOqqCBWZ24LKcYSP1Ilf+8vj4a85JJ2LFRIZFcsSg/mm6HaMFaqWcPQ6Fwipu0zzK6gW2FMl5GDVN838Mthv17F378fNEp9rkC+Rfuft39V2GHN9cBTjGMH+e4uurYxHxhRJS1gaONkDF9TeJdDRa4TRIOeUOLPNQTn49D6+RLWk71hwL+7z3Rh4c7x5xpQM/u1NUKNf8cIKDnxRzvWM2Ahd4CAwjt9VG1EzsvkP+fxehb+yHpyEfsvyGOXbiGYOQ9ekOaP5TOP0grbmD5Lv4joQxk/EOU8WgAf2Yb18o0iaBq/dKnjK7oAyUnxpHayal3DKVXIRXQzf+HVQRNG4jvJYTMR24/FRirgKFmdU9MaKZ3UXNFnhxj2CDERuRnS/hF1b1+6zN0bKsl8BkeTjMtYVhZPO00FSH7EZva6hjRxND1jBs="
 before_script:
   - docker pull pactfoundation/pact-cli:latest
 script:
-- make ci
+  - make ci
